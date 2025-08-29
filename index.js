@@ -67,3 +67,32 @@ document.getElementById("clear-history").addEventListener("click", function () {
   const callHistory = getElement("history-container");
   callHistory.innerHTML = "";
 });
+
+//copy
+// copy-btn
+
+getElement("call-box").addEventListener("click", function (e) {
+  const cardCopy = e.target.closest(".copy-btn");
+
+  if (cardCopy) {
+    const serviceNumber2 = cardCopy.parentNode.parentNode.children[3].innerText;
+
+    const copyNumber = serviceNumber2;
+
+    const copyValue = getElement("copy-value").innerText;
+
+    const newCopyValue = Number(copyValue) + 1;
+
+    getElement("copy-value").innerText = newCopyValue;
+
+    navigator.clipboard
+      .writeText(copyNumber)
+      .then(() => {
+        alert("Number is copied: " + serviceNumber2);
+      })
+
+      .catch((err) => {
+        console.error("Failed to copy: ", err);
+      });
+  }
+});
