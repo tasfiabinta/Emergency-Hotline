@@ -25,11 +25,11 @@
   </head>
   <body class="m-0 p-0 max-w-[1920px] mx-auto min-h-[100vh]">
     <header
-      class="flex flex-col sm:flex-row justify-between items-center px-11 py-4 space-y-5"
+      class="flex flex-col sm:flex-row justify-between items-center px-11 py-4 space-y-5 sm:space-y-0"
     >
       <!-- navbar section -->
-      <div class="flex items-center mt-3">
-        <img src="./assets/logo.png" alt="" class="w-10" />
+      <div class="flex items-center sm:mt-0 mt-3">
+        <img src="./assets/logo.png" alt="" class="w-12" />
         <h1
           class="text-[#006747] font-extrabold leading-6 ml-3 sm:text-xl text-2xl"
         >
@@ -47,7 +47,7 @@
         <div
           class="flex justify-center items-center gap-2 w-[90px] h-[40px] rounded-full bg-[#41ff6b1a]"
         >
-          <span class="font-bold">100</span
+          <span id="coin-count" class="font-bold">100</span
           ><img src="./assets/coin.png" alt="" class="w-6" />
         </div>
         <div
@@ -78,7 +78,10 @@
       </section>
       <!-- call section -->
       <section class="">
-        <div class="w-11/12 mx-auto grid sm:grid-cols-12 gap-4 mt-8">
+        <div
+          id="call-box"
+          class="w-11/12 mx-auto grid sm:grid-cols-12 gap-6 mt-8 space-y-9"
+        >
           <!-- contact list section -->
           <div class="sm:col-span-9 grid sm:grid-cols-3 grid-cols-1 gap-6">
             <!-- national emergency -->
@@ -103,7 +106,7 @@
                   National Emergency Number
                 </h2>
                 <p class="text-[#5c5c5c] text-[18px]">National Emergency</p>
-                <h1 class="font-bold text-[30px]">999</h1>
+                <h1 class="font-bold text-[30px] service">999</h1>
 
                 <div
                   class="badge badge-ghost bg-gray-200 h-[40px] rounded-2xl font-semibold text-gray-500 mb-4"
@@ -117,7 +120,7 @@
                     <i class="fa-regular fa-copy"></i>Copy
                   </button>
                   <button
-                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300"
+                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300 call-btn"
                   >
                     <i class="fa-solid fa-phone"></i>Call
                   </button>
@@ -139,7 +142,7 @@
                   </div>
                 </div>
 
-                <h2 class="card-title font-bold text-[24px]">
+                <h2 class="card-title font-bold text-[24px] service">
                   Police Helpline Number
                 </h2>
                 <p class="text-[#5c5c5c] text-[18px]">Police</p>
@@ -157,7 +160,7 @@
                     <i class="fa-regular fa-copy"></i>Copy
                   </button>
                   <button
-                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300"
+                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300 call-btn"
                   >
                     <i class="fa-solid fa-phone"></i>Call
                   </button>
@@ -201,7 +204,7 @@
                     <i class="fa-regular fa-copy"></i>Copy
                   </button>
                   <button
-                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300"
+                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300 call-btn"
                   >
                     <i class="fa-solid fa-phone"></i>Call
                   </button>
@@ -244,7 +247,7 @@
                     <i class="fa-regular fa-copy"></i>Copy
                   </button>
                   <button
-                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300"
+                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300 call-btn"
                   >
                     <i class="fa-solid fa-phone"></i>Call
                   </button>
@@ -287,7 +290,7 @@
                     <i class="fa-regular fa-copy"></i>Copy
                   </button>
                   <button
-                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300"
+                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300 call-btn"
                   >
                     <i class="fa-solid fa-phone"></i>Call
                   </button>
@@ -330,7 +333,7 @@
                     <i class="fa-regular fa-copy"></i>Copy
                   </button>
                   <button
-                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300"
+                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300 call-btn"
                   >
                     <i class="fa-solid fa-phone"></i>Call
                   </button>
@@ -338,7 +341,7 @@
               </div>
             </div>
             <!-- electricity outage -->
-            <div class="card bg-base-100 w-[96] shadow-lg sm:mb-10">
+            <div class="card bg-base-100 w-[96] shadow-lg">
               <div class="card-body">
                 <div class="flex justify-between items-center">
                   <div class="p-3 rounded-2xl bg-[#ffe3e2]">
@@ -373,7 +376,7 @@
                     <i class="fa-regular fa-copy"></i>Copy
                   </button>
                   <button
-                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300"
+                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300 call-btn"
                   >
                     <i class="fa-solid fa-phone"></i>Call
                   </button>
@@ -382,7 +385,7 @@
             </div>
 
             <!-- brac helpline -->
-            <div class="card bg-base-100 w-[96] shadow-lg sm:mb-10">
+            <div class="card bg-base-100 w-[96] shadow-lg">
               <div class="card-body">
                 <div class="flex justify-between items-center">
                   <div class="p-3 rounded-2xl bg-[#ffe3e2]">
@@ -411,7 +414,7 @@
                     <i class="fa-regular fa-copy"></i>Copy
                   </button>
                   <button
-                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300"
+                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300 call-btn"
                   >
                     <i class="fa-solid fa-phone"></i>Call
                   </button>
@@ -419,7 +422,7 @@
               </div>
             </div>
             <!-- BD Railway -->
-            <div class="card bg-base-100 w-[96] shadow-lg sm:mb-10">
+            <div class="card bg-base-100 w-[96] shadow-lg">
               <div class="card-body">
                 <div class="flex justify-between items-center">
                   <div class="p-3 rounded-2xl bg-[#ffe3e2]">
@@ -454,7 +457,7 @@
                     <i class="fa-regular fa-copy"></i>Copy
                   </button>
                   <button
-                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300"
+                    class="badge w-[50%] h-[40px] bg-[#00a63e] text-white hover:bg-gray-300 call-btn"
                   >
                     <i class="fa-solid fa-phone"></i>Call
                   </button>
@@ -464,7 +467,7 @@
           </div>
 
           <!-- call history section -->
-          <div class="bg-white rounded-md shadow-lg sm:col-span-3 mb-10">
+          <div class="bg-white rounded-md shadow-lg sm:col-span-3 mb-9">
             <div class="flex justify-between items-center p-5">
               <h1>
                 <i class="fa-regular fa-clock text-[20px] text-gray-500"></i

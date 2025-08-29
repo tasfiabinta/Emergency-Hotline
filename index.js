@@ -3,7 +3,7 @@ function getElement(id) {
   return element;
 }
 
-//heart number increment
+//heart icon functionalities
 
 const heartBtns = document.getElementsByClassName("heart-btns");
 
@@ -15,3 +15,28 @@ for (const btn of heartBtns) {
     getElement("heart").innerText = Number(newHeartValue);
   });
 }
+
+//card functionalities
+
+getElement("call-box").addEventListener("click", function (e) {
+  if (e.target.className.includes("call-btn")) {
+    const cardCall = e.target;
+
+    const serviceName = cardCall.parentNode.parentNode.children[1].innerText;
+
+    const serviceNumber = cardCall.parentNode.parentNode.children[3].innerText;
+
+    // console.log(serviceName, serviceNumber);
+
+    const coinValue = getElement("coin-count").innerText;
+
+    const newCoinValue = Number(coinValue) - 20;
+
+    if (newCoinValue < 0) {
+      alert("⚠️ Insufficient Coin. Need minimum 20 coins to make a call ⚠️");
+      return;
+    }
+    alert("📞 Calling " + serviceName + " " + serviceNumber + "...");
+    getElement("coin-count").innerText = Number(newCoinValue);
+  }
+});
