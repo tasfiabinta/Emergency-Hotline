@@ -8,7 +8,7 @@ Answer : **getElementById and getElementsByClassName** both are _HTML collection
 
 2. How do you **create and insert a new element into the DOM**?
 
-Answer : Firstly, create a new element by using **document.createElement('element')** and keep it in a constant . Secondly, take another const variable which stores parent element by using **document.getElementById('id')** . Finally, insert the new element to the parent using **parentVariable.appendChild('new element variable')**
+Answer : Firstly,I will create a new element by using **document.createElement('element')** and keep it in a constant . Secondly,I'll take another const variable which stores parent element by using **document.getElementById('id')** . Finally,I'll insert the new element to the parent using **parentVariable.appendChild('new element variable')**
 
 ##
 
