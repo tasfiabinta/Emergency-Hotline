@@ -69,7 +69,6 @@ document.getElementById("clear-history").addEventListener("click", function () {
 });
 
 //copy
-// copy-btn
 
 getElement("call-box").addEventListener("click", function (e) {
   const cardCopy = e.target.closest(".copy-btn");
