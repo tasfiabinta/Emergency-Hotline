@@ -19,12 +19,13 @@ for (const btn of heartBtns) {
 //card functionalities
 
 getElement("call-box").addEventListener("click", function (e) {
-  if (e.target.className.includes("call-btn")) {
-    const cardCall = e.target;
-
+  const cardCall = e.target.closest(".call-btn");
+  if (cardCall) {
     const serviceName = cardCall.parentNode.parentNode.children[1].innerText;
 
     const serviceNumber = cardCall.parentNode.parentNode.children[3].innerText;
+
+    const date = new Date().toLocaleTimeString(undefined, { hour12: true });
 
     // console.log(serviceName, serviceNumber);
 
@@ -38,5 +39,31 @@ getElement("call-box").addEventListener("click", function (e) {
     }
     alert("📞 Calling " + serviceName + " " + serviceNumber + "...");
     getElement("coin-count").innerText = Number(newCoinValue);
+
+    const callHistory = getElement("history-container");
+
+    const newHistory = document.createElement("div");
+    newHistory.innerHTML = `
+                  <div
+                class="flex justify-between items-center p-3 bg-[#fafafa] mx-3 rounded-lg mb-4 gap-3"
+              >
+                <div>
+                  <h1 class="font-bold">${serviceName}</h1>
+                  <p class="font-semibold text-[#5c5c5c]">${serviceNumber}</p>
+                </div>
+                <div>
+                  <p >${date}</p>
+                </div>
+              </div>
+
+    `;
+    callHistory.appendChild(newHistory);
   }
+});
+
+//clear history
+
+document.getElementById("clear-history").addEventListener("click", function () {
+  const callHistory = getElement("history-container");
+  callHistory.innerHTML = "";
 });
